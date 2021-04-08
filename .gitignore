@@ -1,0 +1,11 @@
+node_modules
+
+/dist-aot
+/dist-jit
+/temp-aot
+
+/index.html
+/yarn-error.log
+
+**/*.ngfactory.ts
+**/*.ngsummary.json

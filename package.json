@@ -1,0 +1,51 @@
+{
+  "name": "upgraded-phonecat",
+  "version": "1.0.0",
+  "description": "An example project upgrading a simple phonecat app from AngularJS to Angular.",
+  "scripts": {
+    "prebuild-jit": "yarn run clean-jit",
+    "build-jit": "tsc -p tsconfig-jit.json",
+    "clean-jit": "node --eval \"require('shelljs').rm('-rf', 'dist-jit')\"",
+    "serve-jit": "node --eval \"require('shelljs').cp('index-jit.html', 'index.html')\" && lite-server",
+    "prebuild-aot": "yarn run clean-aot",
+    "build-aot": "ngc -p tsconfig-aot.json",
+    "clean-aot": "node --eval \"require('shelljs').rm('-rf', 'dist-aot')\"",
+    "serve-aot": "node --eval \"require('shelljs').cp('index-aot.html', 'index.html')\" && lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular-upgrade-examples/phonecat.git"
+  },
+  "keywords": [
+    "Angular",
+    "AngularJS",
+    "ngUpgrade"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular-upgrade-examples/phonecat/issues"
+  },
+  "homepage": "https://github.com/angular-upgrade-examples/phonecat#readme",
+  "dependencies": {
+    "@angular/common": "^4.0.1",
+    "@angular/compiler": "^4.0.1",
+    "@angular/core": "^4.0.1",
+    "@angular/forms": "^4.0.1",
+    "@angular/platform-browser": "^4.0.1",
+    "@angular/platform-browser-dynamic": "^4.0.1",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.3.0",
+    "shelljs": "^0.7.7",
+    "systemjs": "^0.20.11",
+    "zone.js": "^0.8.5"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "^4.0.1",
+    "@types/jasmine": "^2.5.47",
+    "@types/systemjs": "^0.20.2",
+    "lite-server": "^2.3.0",
+    "typescript": "^2.2.2"
+  }
+}
